@@ -13,8 +13,6 @@ function makeRows(rows, cols) {
     let cell = document.createElement("div");
     cell.setAttribute("id", "grid-id");
 
-    //cell.innerText = (c + 1);
-
     container.appendChild(cell).className = "grid-item";
 
     cell.addEventListener('mouseover', e => e.target.classList.add('grid-item-hover'));
