@@ -11,6 +11,7 @@ function makeRows(rows, cols) {
   for (c = 0; c < (rows * cols); c++) {
 
     let cell = document.createElement("div");
+    cell.setAttribute("id", "grid-id");
 
     //cell.innerText = (c + 1);
 
@@ -22,4 +23,21 @@ function makeRows(rows, cols) {
 
 };
 
+function getInput() {
+
+    let number = prompt("Enter a number");
+
+    const grid = document.getElementById("grid-id");
+
+    grid.remove();
+
+    $('.grid-item').remove();
+
+    makeRows(number, number);
+}
+
 makeRows(16, 16);
+
+let newSketch = document.querySelector('#newSketch');
+
+newSketch.addEventListener('click', getInput);
