@@ -1,5 +1,5 @@
 
-const container = document.getElementById("container");
+const container = document.getElementById("grid-main");
 let rows = document.getElementsByClassName("gridRow");
 let cells = document.getElementsByClassName("cell");
 
@@ -23,26 +23,3 @@ function makeRows(rows, cols) {
 };
 
 makeRows(16, 16);
-
-
-function changeBackground() {
-
-let getGrid = document.querySelector(".grid-item");
-
-getGrid.addEventListener("mouseover", function() {
-
-    getGrid.classList.add("grid-item-hover");
-
-});
-
-}
-
-$(document).on("mouseover", ".grid-item", function() {
-
-
-    getGrid.classList.add("grid-item-hover");
-});
-
-$(document).on("mouseleave", ".grid-item", function() {
-    // hover ends code here
-});
