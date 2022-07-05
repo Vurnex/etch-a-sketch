@@ -23,15 +23,28 @@ function makeRows(rows, cols) {
 
 function getInput() {
 
-    let number = prompt("Enter a number");
+    let newSize = prompt("Enter a number between 1 - 100");
 
     const grid = document.getElementById("grid-id");
 
-    grid.remove();
+    let toInt = parseInt(newSize);
 
-    $('.grid-item').remove();
+    if (toInt > 1 && toInt <= 100) {
 
-    makeRows(number, number);
+        grid.remove();
+    
+        $('.grid-item').remove();
+    
+        makeRows(toInt, toInt);
+
+    }
+    else {
+
+        alert("The value must be a number between 1 and 100.");
+        getInput();
+    }
+
+
 }
 
 makeRows(16, 16);
